@@ -1,7 +1,6 @@
-*.config
 *.sln
 .vs\
 .vs\ice2ocean_website\v14\.suo
-*.png
+
 
 
