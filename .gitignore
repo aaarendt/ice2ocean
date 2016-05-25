@@ -5,3 +5,5 @@ _site
 *.config
 *.sln
 .vs/
+.vs/config
+.vs/ice2ocean_website
