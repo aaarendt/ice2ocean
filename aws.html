@@ -20,7 +20,7 @@
     <header>
         <div class="inner">
             <h1><a href="index.html">ice2ocean</a></h1>
-            <h2>REST interface for ice2ocean API</h2>
+            <h2>Site for uploading your data to ice2ocean database</h2>
         </div>
     </header>
 
@@ -36,19 +36,19 @@
                 <html>
                  <form action="https://ice2ocean.s3-us-west-2.amazonaws.com" method="post" enctype="multipart/form-data">
                         Key to upload:
-                        <input type="input" name="key" value="${filename}" /><br />
+                        <input type="hidden" name="key" value="${filename}" /><br />
                         <input type="hidden" name="acl" value="public-read" />
                         <input type="hidden" name="success_action_redirect" value="http://localhost/" />
                         Content-Type:
-                        <input type="input" name="Content-Type" value="image/jpeg" /><br />
+                        <input type="hidden" name="Content-Type" value="image/jpeg" /><br />
                         <input type="hidden" name="x-amz-meta-uuid" value="14365123651274" />
                         <input type="hidden" name="x-amz-server-side-encryption" value="AES256" />
-                        <input type="text" name="X-Amz-Credential" value="AKIAJSN2IAFRS6356ZWA/20171229/us-west-2/s3/aws4_request" />
-                        <input type="text" name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
-                        <input type="text" name="X-Amz-Date" value="20171229T000000Z" />
+                        <input type="hidden" name="X-Amz-Credential" value="AKIAJSN2IAFRS6356ZWA/20171229/us-west-2/s3/aws4_request" />
+                        <input type="hidden" name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
+                        <input type="hidden" name="X-Amz-Date" value="20171229T000000Z" />
 
                         Tags for File:
-                        <input type="input" name="x-amz-meta-tag" value="" /><br />
+                        <input type="hidden" name="x-amz-meta-tag" value="" /><br />
                         <input type="hidden" name="Policy" value='eydjb25kaXRpb25zJzogW3snYnVja2V0JzogJ2ljZTJvY2Vhbid9LCBbJ3N0YXJ0cy13aXRoJywgJyRrZXknLCAnJ10sIHsnYWNsJzogJ3B1YmxpYy1yZWFkJ30sIHsnc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QnOiAnaHR0cDovL2xvY2FsaG9zdC8nfSwgWydzdGFydHMtd2l0aCcsICckQ29udGVudC1UeXBlJywgJ2ltYWdlLyddLCB7J3gtYW16LW1ldGEtdXVpZCc6ICcxNDM2NTEyMzY1MTI3NCd9LCB7J3gtYW16LXNlcnZlci1zaWRlLWVuY3J5cHRpb24nOiAnQUVTMjU2J30sIFsnc3RhcnRzLXdpdGgnLCAnJHgtYW16LW1ldGEtdGFnJywgJyddLCB7J3gtYW16LWNyZWRlbnRpYWwnOiAnQUtJQUpTTjJJQUZSUzYzNTZaV0EvMjAxNzEyMjkvdXMtd2VzdC0yL3MzL2F3czRfcmVxdWVzdCd9LCB7J3gtYW16LWFsZ29yaXRobSc6ICdBV1M0LUhNQUMtU0hBMjU2J30sIHsneC1hbXotZGF0ZSc6ICcyMDE3MTIyOVQwMDAwMDBaJ31dLCAnZXhwaXJhdGlvbic6ICcyMDE3LTEyLTMwVDEyOjAwOjAwLjAwMFonfQ==' />
                         <input type="hidden" name="X-Amz-Signature" value='ZVs0LmePN9cXw4gOZo35asIha0Q=' />
                         File:
