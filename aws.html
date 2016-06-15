@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Ice2ocean by aaarendt</title>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="index.html">ice2ocean</a></h1>
+            <h2>REST interface for ice2ocean API</h2>
+        </div>
+    </header>
+
+    <div id="content-wrapper">
+        <div class="inner clearfix">
+            <section id="main-content">
+                <h3>
+                    <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+                        <span aria-hidden="true" class="octicon octicon-link"></span>
+                    </a>Upload data to AWS
+                </h3>
+
+                <html>
+                 <form action="https://ice2ocean.s3-us-west-2.amazonaws.com" method="post" enctype="multipart/form-data">
+                        Key to upload:
+                        <input type="input" name="key" value="${filename}" /><br />
+                        <input type="hidden" name="acl" value="public-read" />
+                        <input type="hidden" name="success_action_redirect" value="http://localhost/" />
+                        Content-Type:
+                        <input type="input" name="Content-Type" value="image/jpeg" /><br />
+                        <input type="hidden" name="x-amz-meta-uuid" value="14365123651274" />
+                        <input type="hidden" name="x-amz-server-side-encryption" value="AES256" />
+                        <input type="text" name="X-Amz-Credential" value="AKIAJSN2IAFRS6356ZWA/20171229/us-west-2/s3/aws4_request" />
+                        <input type="text" name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
+                        <input type="text" name="X-Amz-Date" value="20171229T000000Z" />
+
+                        Tags for File:
+                        <input type="input" name="x-amz-meta-tag" value="" /><br />
+                        <input type="hidden" name="Policy" value='eydjb25kaXRpb25zJzogW3snYnVja2V0JzogJ2ljZTJvY2Vhbid9LCBbJ3N0YXJ0cy13aXRoJywgJyRrZXknLCAnJ10sIHsnYWNsJzogJ3B1YmxpYy1yZWFkJ30sIHsnc3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QnOiAnaHR0cDovL2xvY2FsaG9zdC8nfSwgWydzdGFydHMtd2l0aCcsICckQ29udGVudC1UeXBlJywgJ2ltYWdlLyddLCB7J3gtYW16LW1ldGEtdXVpZCc6ICcxNDM2NTEyMzY1MTI3NCd9LCB7J3gtYW16LXNlcnZlci1zaWRlLWVuY3J5cHRpb24nOiAnQUVTMjU2J30sIFsnc3RhcnRzLXdpdGgnLCAnJHgtYW16LW1ldGEtdGFnJywgJyddLCB7J3gtYW16LWNyZWRlbnRpYWwnOiAnQUtJQUpTTjJJQUZSUzYzNTZaV0EvMjAxNzEyMjkvdXMtd2VzdC0yL3MzL2F3czRfcmVxdWVzdCd9LCB7J3gtYW16LWFsZ29yaXRobSc6ICdBV1M0LUhNQUMtU0hBMjU2J30sIHsneC1hbXotZGF0ZSc6ICcyMDE3MTIyOVQwMDAwMDBaJ31dLCAnZXhwaXJhdGlvbic6ICcyMDE3LTEyLTMwVDEyOjAwOjAwLjAwMFonfQ==' />
+                        <input type="hidden" name="X-Amz-Signature" value='ZVs0LmePN9cXw4gOZo35asIha0Q=' />
+                        File:
+                        <input type="file" name="file" /> <br />
+                        <!-- The elements after this will be ignored -->
+                        <input type="submit" name="submit" value="Upload to Amazon S3" />
+                    </form>
+
+                
+            </section>
+        </div>
+    </div>
+
+
+</body>
+</html>
